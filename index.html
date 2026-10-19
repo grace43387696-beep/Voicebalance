@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f766e">
+  <title>내 목소리 가이드</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="logo">🎤</div>
+      <h1>내 목소리 가이드</h1>
+      <p>주변 소음에 맞는 목소리 크기를 확인해 보세요.</p>
+    </header>
+
+    <section class="light-panel" aria-live="polite">
+      <div id="status-light" class="light neutral">
+        <span id="light-icon">🎙️</span>
+      </div>
+      <h2 id="result">측정을 시작해 주세요</h2>
+      <p id="message">마이크 권한이 필요합니다.</p>
+    </section>
+
+    <section class="measurements">
+      <div class="measurement">
+        <span>주변 소음</span>
+        <strong id="ambient-value">측정 전</strong>
+      </div>
+      <div class="measurement">
+        <span>내 목소리</span>
+        <strong id="voice-value">측정 전</strong>
+      </div>
+    </section>
+
+    <section class="controls">
+      <button id="start-button" class="primary">
+        마이크 측정 시작
+      </button>
+      <button id="ambient-button" disabled>
+        1. 주변 소음 기준 측정
+      </button>
+      <button id="voice-button" disabled>
+        2. 평소 목소리 기준 측정
+      </button>
+      <button id="stop-button" class="stop" disabled>
+        측정 중지
+      </button>
+    </section>
+
+    <p class="notice">
+      이 사이트는 시제품입니다. 브라우저의 마이크 권한이 필요합니다.
+      현재 음량 비교만 지원하며, 사용자와 다른 사람의 목소리를
+      구별하는 화자 인식 기능은 포함되어 있지 않습니다.
+      음량 측정값은 실제 소음계의 dB SPL과 다를 수 있습니다.
+    </p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

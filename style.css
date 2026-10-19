@@ -1,0 +1,29 @@
+/* 기본 스타일 플레이스홀더 */
+:root{
+  --primary: #0f766e;
+  --bg: #ffffff;
+  --text: #0f172a;
+}
+html,body{
+  height:100%;
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+.app{
+  max-width:680px;
+  margin:32px auto;
+  padding:24px;
+}
+header{display:flex;align-items:center;gap:12px}
+.logo{font-size:32px}
+.primary{background:var(--primary);color:#fff;border:none;padding:10px 16px;border-radius:8px}
+.stop{background:#ef4444;color:#fff;border:none;padding:10px 16px;border-radius:8px}
+.measurements{display:flex;gap:16px;margin-top:16px}
+.measurement{flex:1;padding:12px;border:1px solid #e6e6e6;border-radius:8px}
+.light-panel{margin-top:16px}
+.light{width:80px;height:80px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#f3f4f6}
+.light.good{background:#10b981}
+.light.warn{background:#f59e0b}
+.light.bad{background:#ef4444}
